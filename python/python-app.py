@@ -7,8 +7,8 @@ REQUEST_COUNT = Counter('app_requests_count', 'total app http request count',['a
 RANDOM_COUNT = Counter('app_random_count','increment counter by random value')
 ram_metric = Gauge("pod_memory_usage_bytes", "Memory usage in bytes.")
 cpu_metric = Gauge("pod_cpu_usage_percent", "CPU usage percent.")
-APP_PORT = 9011
-METRICS_PORT = 8011
+APP_PORT = 9371
+METRICS_PORT = 8371
 
 class HandleRequests(http.server.BaseHTTPRequestHandler):
 
@@ -31,5 +31,5 @@ class HandleRequests(http.server.BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     start_http_server(METRICS_PORT)
-    server = http.server.HTTPServer(('', APP_PORT), HandleRequests)
+    server = http.server.HTTPServer(( '', APP_PORT), HandleRequests)
     server.serve_forever()

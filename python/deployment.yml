@@ -17,5 +17,7 @@ spec:
     spec:
       containers:
         - name: python-app
-          image: tomcat-70998/prom-project:v1
+          image: gcr.io/tomcat-70998/prom-project:v1
+          imagePullPolicy: IfNotPresent
+
 
