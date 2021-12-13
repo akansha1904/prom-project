@@ -1,0 +1,10 @@
+version: "3.7"  
+services:
+  app:
+    image: prom-project:v1
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9371:9371"
+      - "8371:8371"
