@@ -41,4 +41,4 @@ scrape_configs:
       - targets: ["localhost:8000"]   
   - job_name: "python-app"
     static_configs: 
-      - targets: [" "]
+      - targets: ["10.110.204.68:8371"]
